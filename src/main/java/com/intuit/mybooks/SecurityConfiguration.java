@@ -28,16 +28,19 @@ public class SecurityConfiguration  {
                 .build();
         return new InMemoryUserDetailsManager(user,admin);
     }
-    @Bean
-    //How HTTP Security gets Implemented.
-    SecurityFilterChain web(HttpSecurity http) throws  Exception{
-        http.authorizeHttpRequests(authorize->{
-            authorize
-                    .requestMatchers("/admin").hasRole("ADMIN")
-                    .requestMatchers("/user").hasAnyRole("USER","ADMIN")
-                    .requestMatchers("/").permitAll();
-        })
-                .formLogin();
-        return http.build();
-    }
+//    @Bean
+//    //How HTTP Security gets Implemented.
+//    SecurityFilterChain web(HttpSecurity http) throws  Exception{
+//
+//        http.authorizeHttpRequests(authorize->{
+//            authorize
+//                    .requestMatchers("/admin").hasRole("ADMIN")
+//                    .requestMatchers("/user").hasAnyRole("USER","ADMIN")
+//                    .requestMatchers("/").permitAll();
+//        })
+//                .formLogin();
+//        return http.build();
+//    }
+
+    //lets implement Basic Auth for all http requests.
 }

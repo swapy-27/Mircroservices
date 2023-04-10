@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 //Customer is the table which it gonna play with , Long is primary key type here
 
 public interface CustomerRepository extends JpaRepository<Customer,Long> {
+    Customer findByEmail(String email);
 }

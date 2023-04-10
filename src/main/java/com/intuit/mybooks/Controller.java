@@ -29,16 +29,30 @@ public class Controller {
 
 
 
-    @PostMapping(path = "/login")
-    public ResponseEntity<String> login(@RequestBody String email ,  String password){
+//    @PostMapping(path = "/login")
+//    public ResponseEntity<String> login(@RequestBody String email ,  String password){
+//
+//        Customer customer = serviceLayer.login(email,password);
+//
+//        if(customer!=null){
+//         return new  ResponseEntity<>("Welcome!", HttpStatus.OK);
+//        }else{
+//            return new  ResponseEntity<>("Email or password invalid!", HttpStatus.BAD_REQUEST);
+//        }
+//
+//    }
 
-        Customer customer = serviceLayer.login(email,password);
 
-        if(customer!=null){
-         return new  ResponseEntity<>("Welcome!", HttpStatus.OK);
-        }else{
-            return new  ResponseEntity<>("Email or password invalid!", HttpStatus.BAD_REQUEST);
-        }
-
-    }
+//    @PostMapping(path = "/signUp")
+//    public ResponseEntity<String> signUp(@RequestBody String email ,  String password , String firstName , String lastName){
+//
+//        Customer customer = serviceLayer.signUp(email,password, firstName ,  lastName);
+//
+//        if(customer!=null){
+//            return new  ResponseEntity<>("Welcome!", HttpStatus.OK);
+//        }else{
+//            return new  ResponseEntity<>("Email or password invalid!", HttpStatus.BAD_REQUEST);
+//        }
+//
+//    }
 }

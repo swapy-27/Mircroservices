@@ -11,10 +11,16 @@ public class ServiceLayer {
     CustomerRepository customerRepository;
 
 
-    private Customer login(String email , String password){
-
+    public Customer login(String email, String password){
         Customer customer = customerRepository.findByEmail(email);
+
+        return customer;
     }
+
+//    public Customer signUp(String email , String password , String firstName , String lastName){
+//        Customer customer = new Customer()
+//        customerRepository.save()
+//    }
 
 
 }
